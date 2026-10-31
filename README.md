@@ -39,7 +39,7 @@ Run the real-time scoring engine and webhook listener alongside the UI:
 
 ```bash
 # Step 1: Clone the repository
-git clone https://github.com/<your-username>/keshava-cod-decision-engine.git
+git clone https://github.com/muthuselvamm472-pythonstack/keshava-cod-decision-engine.git
 cd keshava-cod-decision-engine
 
 # Step 2: Install lightweight dependencies (pandas, numpy, pyyaml, pydantic)
@@ -475,8 +475,7 @@ git add .
 git commit -m "feat: complete Keshava COD EV & Anti-Cheat Decision Engine with 2-page Business Memo"
 
 # 4. Link to your public repository on GitHub
-# Replace <your-username> with your GitHub handle:
-git remote add origin https://github.com/<your-username>/keshava-cod-decision-engine.git
+git remote add origin https://github.com/muthuselvamm472-pythonstack/keshava-cod-decision-engine.git
 
 # 5. Push to GitHub
 git push -u origin main
