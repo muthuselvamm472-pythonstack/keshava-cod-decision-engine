@@ -1,0 +1,29 @@
+# =====================================================================
+# Keshava D2C COD Decision Engine Configuration
+# Non-technical operations & marketing policy file
+# =====================================================================
+
+financials:
+  gross_margin: 0.62                  # 62% contribution margin on delivered merchandise
+  forward_shipping: 65.0              # ₹65 forward courier charge
+  return_shipping: 65.0               # ₹65 reverse logistics charge on RTO
+  packaging_cost: 25.0                # ₹25 box, insert & fulfillment handling cost
+  damage_rate: 0.08                   # 8% of returns returned unsellable/damaged
+  damaged_product_cost: 180.0         # ₹180 average replacement cost of unsellable unit
+  prepaid_rto_rate: 0.04              # 4% baseline RTO on prepaid orders
+
+operational_funnel:
+  whatsapp_reachability: 0.65         # 65% of customers reachable via WhatsApp (valid phone)
+  confirmation_risk_reduction: 0.65   # gamma = 0.65 (65% relative reduction in RTO risk upon COD confirmation)
+  prepaid_discount_share: 0.35        # Share of gross RTO savings shared with customer as discount
+  max_prepaid_discount: 100.0         # Maximum discount cap in ₹
+  prepaid_discount_step: 25.0         # Nearest denomination step in ₹ (e.g. ₹25, ₹50, ₹75, ₹100)
+  prepaid_take_rate: 0.45             # Estimated fraction of reachable customers who accept prepaid nudge
+  cod_confirm_take_rate: 0.70         # Estimated fraction of reachable remaining customers who reply YES
+
+marketing_compromise:
+  first_time_customer_ltv_buffer: 150.0  # Marketing growth dial: ₹0 (strict ops) to ₹300 (full CAC credit)
+  serial_rto_hard_cap: 2                 # Hard block COD if customer_prior_rto >= 2 (76.5% RTO cliff)
+  high_ticket_unit_price_threshold: 700.0 # Billed price / num_items > 700 triggers price-glitch / high remorse flag
+  bayesian_shrinkage_weight: 10.0        # Empirical Bayes shrinkage pseudo-weight (m = 10)
+
